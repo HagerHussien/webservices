@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://localhost/soap/newsservice" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://localhost/soap/newsservice">
+<types>
+<xsd:schema targetNamespace="http://localhost/soap/newsservice"
+>
+ <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+ <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+</xsd:schema>
+</types>
+<message name="news.addUserRequest">
+  <part name="name" type="xsd:string" />
+  <part name="email" type="xsd:string" />
+  <part name="pass" type="xsd:string" /></message>
+<message name="news.addUserResponse">
+  <part name="return" type="xsd:string" /></message>
+<message name="news.loginRequest">
+  <part name="email" type="xsd:string" />
+  <part name="pass" type="xsd:string" /></message>
+<message name="news.loginResponse">
+  <part name="return" type="xsd:string" /></message>
+<message name="news.viewUserRequest">
+  <part name="token" type="xsd:string" /></message>
+<message name="news.viewUserResponse">
+  <part name="return" type="xsd:string" /></message>
+<message name="news.addArticalRequest">
+  <part name="title" type="xsd:string" />
+  <part name="body" type="xsd:string" />
+  <part name="token" type="xsd:string" /></message>
+<message name="news.addArticalResponse">
+  <part name="return" type="xsd:string" /></message>
+<message name="news.viewArticalRequest">
+  <part name="token" type="xsd:string" />
+  <part name="id" type="xsd:string" /></message>
+<message name="news.viewArticalResponse">
+  <part name="return" type="xsd:string" /></message>
+<message name="news.deleteArticalRequest">
+  <part name="type" type="xsd:string" /></message>
+<message name="news.deleteArticalResponse">
+  <part name="return" type="xsd:string" /></message>
+<message name="news.viewArticalsRequest">
+  <part name="type" type="xsd:string" /></message>
+<message name="news.viewArticalsResponse">
+  <part name="return" type="xsd:string" /></message>
+<portType name="newsservicePortType">
+  <operation name="news.addUser">
+    <input message="tns:news.addUserRequest"/>
+    <output message="tns:news.addUserResponse"/>
+  </operation>
+  <operation name="news.login">
+    <input message="tns:news.loginRequest"/>
+    <output message="tns:news.loginResponse"/>
+  </operation>
+  <operation name="news.viewUser">
+    <input message="tns:news.viewUserRequest"/>
+    <output message="tns:news.viewUserResponse"/>
+  </operation>
+  <operation name="news.addArtical">
+    <input message="tns:news.addArticalRequest"/>
+    <output message="tns:news.addArticalResponse"/>
+  </operation>
+  <operation name="news.viewArtical">
+    <input message="tns:news.viewArticalRequest"/>
+    <output message="tns:news.viewArticalResponse"/>
+  </operation>
+  <operation name="news.deleteArtical">
+    <input message="tns:news.deleteArticalRequest"/>
+    <output message="tns:news.deleteArticalResponse"/>
+  </operation>
+  <operation name="news.viewArticals">
+    <input message="tns:news.viewArticalsRequest"/>
+    <output message="tns:news.viewArticalsResponse"/>
+  </operation>
+</portType>
+<binding name="newsserviceBinding" type="tns:newsservicePortType">
+  <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="news.addUser">
+    <soap:operation soapAction="http://localhost/webservices/wsdl/server.php/news.addUser" style="rpc"/>
+    <input><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="news.login">
+    <soap:operation soapAction="http://localhost/webservices/wsdl/server.php/news.login" style="rpc"/>
+    <input><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="news.viewUser">
+    <soap:operation soapAction="http://localhost/webservices/wsdl/server.php/news.viewUser" style="rpc"/>
+    <input><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="news.addArtical">
+    <soap:operation soapAction="http://localhost/webservices/wsdl/server.php/news.addArtical" style="rpc"/>
+    <input><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="news.viewArtical">
+    <soap:operation soapAction="http://localhost/webservices/wsdl/server.php/news.viewArtical" style="rpc"/>
+    <input><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="news.deleteArtical">
+    <soap:operation soapAction="http://localhost/webservices/wsdl/server.php/news.deleteArtical" style="rpc"/>
+    <input><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="news.viewArticals">
+    <soap:operation soapAction="http://localhost/webservices/wsdl/server.php/news.viewArticals" style="rpc"/>
+    <input><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+</binding>
+<service name="newsservice">
+  <port name="newsservicePort" binding="tns:newsserviceBinding">
+    <soap:address location="http://localhost/webservices/wsdl/server.php"/>
+  </port>
+</service>
+</definitions>
