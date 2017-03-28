@@ -87,7 +87,7 @@ Content: {"code":"400","message":"invalid user","sucess":"0"}
 ------------------------------------------------------------------------------
 Create Article
 
-Returns json data about a login user.
+Returns json data about a create article.
 
 URL
 /createarticle.php
