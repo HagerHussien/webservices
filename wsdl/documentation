@@ -1,0 +1,161 @@
+Name: news.addUser
+Binding: newsserviceBinding
+Endpoint: http://localhost/webservices/wsdl/server.php
+SoapAction: http://localhost/webservices/wsdl/server.php/news.addUser
+Style: rpc
+Input:
+  use: encoded
+  namespace: 
+  encodingStyle: http://schemas.xmlsoap.org/soap/encoding/
+  message: news.addUserRequest
+  parts:
+    name: xsd:string
+    email: xsd:string
+    pass: xsd:string
+Output:
+  use: encoded
+  namespace: 
+  encodingStyle: http://schemas.xmlsoap.org/soap/encoding/
+  message: news.addUserResponse
+  parts:
+    return: xsd:string
+Namespace: 
+Transport: http://schemas.xmlsoap.org/soap/http
+------------------------------------------------------
+
+Name: news.login
+Binding: newsserviceBinding
+Endpoint: http://localhost/webservices/wsdl/server.php
+SoapAction: http://localhost/webservices/wsdl/server.php/news.login
+Style: rpc
+Input:
+  use: encoded
+  namespace: 
+  encodingStyle: http://schemas.xmlsoap.org/soap/encoding/
+  message: news.loginRequest
+  parts:
+    email: xsd:string
+    pass: xsd:string
+Output:
+  use: encoded
+  namespace: 
+  encodingStyle: http://schemas.xmlsoap.org/soap/encoding/
+  message: news.loginResponse
+  parts:
+    return: xsd:string
+Namespace: 
+Transport: http://schemas.xmlsoap.org/soap/http
+------------------------------------------------------
+Name: news.viewUser
+Binding: newsserviceBinding
+Endpoint: http://localhost/webservices/wsdl/server.php
+SoapAction: http://localhost/webservices/wsdl/server.php/news.viewUser
+Style: rpc
+Input:
+  use: encoded
+  namespace: 
+  encodingStyle: http://schemas.xmlsoap.org/soap/encoding/
+  message: news.viewUserRequest
+  parts:
+    token: xsd:string
+Output:
+  use: encoded
+  namespace: 
+  encodingStyle: http://schemas.xmlsoap.org/soap/encoding/
+  message: news.viewUserResponse
+  parts:
+    return: xsd:string
+Namespace: 
+Transport: http://schemas.xmlsoap.org/soap/http
+--------------------------------------------------------
+Name: news.addArtical
+Binding: newsserviceBinding
+Endpoint: http://localhost/webservices/wsdl/server.php
+SoapAction: http://localhost/webservices/wsdl/server.php/news.addArtical
+Style: rpc
+Input:
+  use: encoded
+  namespace: 
+  encodingStyle: http://schemas.xmlsoap.org/soap/encoding/
+  message: news.addArticalRequest
+  parts:
+    title: xsd:string
+    body: xsd:string
+    token: xsd:string
+Output:
+  use: encoded
+  namespace: 
+  encodingStyle: http://schemas.xmlsoap.org/soap/encoding/
+  message: news.addArticalResponse
+  parts:
+    return: xsd:string
+Namespace: 
+Transport: http://schemas.xmlsoap.org/soap/http
+---------------------------------------------------------
+Name: news.viewArtical
+Binding: newsserviceBinding
+Endpoint: http://localhost/webservices/wsdl/server.php
+SoapAction: http://localhost/webservices/wsdl/server.php/news.viewArtical
+Style: rpc
+Input:
+  use: encoded
+  namespace: 
+  encodingStyle: http://schemas.xmlsoap.org/soap/encoding/
+  message: news.viewArticalRequest
+  parts:
+    token: xsd:string
+    id: xsd:string
+Output:
+  use: encoded
+  namespace: 
+  encodingStyle: http://schemas.xmlsoap.org/soap/encoding/
+  message: news.viewArticalResponse
+  parts:
+    return: xsd:string
+Namespace: 
+Transport: http://schemas.xmlsoap.org/soap/http
+----------------------------------------------------
+Name: news.deleteArtical
+Binding: newsserviceBinding
+Endpoint: http://localhost/webservices/wsdl/server.php
+SoapAction: http://localhost/webservices/wsdl/server.php/news.deleteArtical
+Style: rpc
+Input:
+  use: encoded
+  namespace: 
+  encodingStyle: http://schemas.xmlsoap.org/soap/encoding/
+  message: news.deleteArticalRequest
+  parts:
+    id: xsd:string
+    token: xsd:string
+Output:
+  use: encoded
+  namespace: 
+  encodingStyle: http://schemas.xmlsoap.org/soap/encoding/
+  message: news.deleteArticalResponse
+  parts:
+    return: xsd:string
+Namespace: 
+Transport: http://schemas.xmlsoap.org/soap/http
+--------------------------------------------------------
+Name: news.viewArticals
+Binding: newsserviceBinding
+Endpoint: http://localhost/webservices/wsdl/server.php
+SoapAction: http://localhost/webservices/wsdl/server.php/news.viewArticals
+Style: rpc
+Input:
+  use: encoded
+  namespace: 
+  encodingStyle: http://schemas.xmlsoap.org/soap/encoding/
+  message: news.viewArticalsRequest
+  parts:
+    type: xsd:string
+Output:
+  use: encoded
+  namespace: 
+  encodingStyle: http://schemas.xmlsoap.org/soap/encoding/
+  message: news.viewArticalsResponse
+  parts:
+    return: xsd:string
+Namespace: 
+Transport: http://schemas.xmlsoap.org/soap/http
